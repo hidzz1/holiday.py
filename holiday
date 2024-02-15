@@ -1,0 +1,52 @@
+#cost of hotel per night
+def hotel_cost(nights):
+    price_per_night=24
+    return nights*price_per_night
+#after user input how many nights they are staying cost will be returned but not printed 
+
+#user should pick 1-3 and based on that a price will be generated 
+def plane_cost(city):
+    if(city== '1'):
+        plane_cost = 50
+
+    elif (city == '2'):
+        plane_cost = 75
+
+    elif(city == '3'):
+        plane_cost = 35
+
+    else:
+        plane_cost = 0
+
+    return plane_cost
+#cost of flights return but not printed 
+
+    
+#price of car rental per day 
+def car_rental(days):
+    cost_per_day=66
+    return cost_per_day*days
+#total cost of renting car will be returned but not printed 
+
+
+#total will now be calculated to give the full cost of the holiday 
+def holiday_cost(nights, city, days):
+    nights= hotel_cost(nights)
+    city = plane_cost(city)
+    days = car_rental(days)
+
+    total = nights + city + days
+    return total 
+ #total cost returned but not printed 
+
+#ask user to input the folliwng which is relevent to the functions 
+nights = int(input("How many nights will you be staying at the hotel?: "))
+city = int(input('\n1 Spain\n2 France\n3 Italy\nWhere you flying to? '))
+days = int(input("How many days will you need the car for?"))
+
+#finally print total costof holiday 
+print("Your total cost of the holiday will be" , holiday_cost(nights, city, days))
+
+
+
+
